@@ -8,12 +8,12 @@ default: &default
 
 development:
   <<: *default
-  database: github_login
+  database: gl_login
 
 test:
   <<: *default
-  database: github_login_test
+  database: gl_login_test
 
 production:
   <<: *default
-  database: github_login_production
+  database: gl_login_production
