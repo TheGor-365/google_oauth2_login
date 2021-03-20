@@ -11,13 +11,19 @@
   </head>
 
   <body class="bg-light">
+
     <%= render 'layouts/nav' %>
 
-    <p class="text-success"><%= notice %></p>
-    <p class="text-danger"><%= alert %></p>
+    <% if notice.present? || alert.present? %>
+      <div class="container">
+        <p class="text-success"><%= notice %></p>
+        <p class="text-danger"><%= alert %></p>
+      </div>
+    <% end %>
 
     <%= yield %>
 
     <%= render 'layouts/footer' %>
+
   </body>
 </html>
